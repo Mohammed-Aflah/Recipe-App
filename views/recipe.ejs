@@ -1,0 +1,53 @@
+<div class="all-Categories">
+    <div class="category-contents">
+        <% if(recipies) { %>
+            <div class="navs">
+                <a href="/">Home</a><span>/</span>
+                <a href="/categories">Category</a> <span>/</span> <a href="/explore">Latest</a> <span>/</span>
+                <p> <%- recipies.name %> </p>
+            </div>
+    </div>
+    <div class="main-contents">
+        <div class="main-image"
+            style="background: url('/uploads/<%- recipies.image %>');background-position: center;background-size: cover;background-repeat: no-repeat;object-fit: cover;border-radius: 5px;height: 100%;">
+        </div>
+        <div class="main-contents">
+            <div class="header-part">
+                <h1> <%-recipies.name %> </h1>
+                <p>🔗 <%-recipies.category %> </p>
+            </div>
+            <div class="middle-part">
+                <h4>Cooking Instructions</h4>
+                <div class="para">
+                    <p> <%-recipies.description %> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur
+                            incidunt molestias, quisquam vitae maxime laudantium dolorum harum obcaecati est
+                            accusantium!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eligendi sapiente nemo
+                            error
+                    </p>
+                </div>
+                <strong>
+                    <span>Source : http://127.0.0.1:8000/recipe/<%-recipies._id %> </span>
+                </strong>
+            </div>
+            <div class="end-part">
+              <strong>
+                <h4>Ingredients</h4>
+            </strong>  
+                <ul>
+                    <li> level teaspoon baking powder</li>
+                    <li> Chilli Powder</li>
+                    <li> level teaspoon Sugar</li>
+                    <li> level teaspoon Honey</li>
+                    <li> level teaspoon Salt</li>
+                    <li> level teaspoon baking Soda</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <%}%>
+        <footer>
+            <h6>Build By aflu</h6>
+        </footer>
+</div>

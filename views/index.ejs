@@ -1,0 +1,170 @@
+<div class="home">
+    <div class="contents">
+        <div class="head">
+            <h1>Huge selection of delicios recipie ideas</h1>
+        </div>
+        <div class="paragraph">
+            <p>Explore our huge selection of delicious recipe ideas including.easy desserts.
+                delicious vegan and vegetarian dinner ideas.gorgeous pasta recipes.quick bakes
+                family-friendly meals and gluten-free recipies
+            </p>
+        </div>
+        <div class="btns">
+            <a href="/explore">Explore Latest</a>
+            <a href="/random">Show Random</a>
+        </div>
+    </div>
+    <div class="imgs">
+        <img src="/images/hero-image.png" alt="">
+    </div>
+    <div class="images">
+        <% if(categories) { %>
+            <% categories.map((item)=>{%>
+                <a href="/categories/<%-item.category %>" style="border-radius: 10px;overflow:hidden">
+                    <div class="category-image"><img src="/images/<%- item.image %>" alt="<%- item.name %>"><a
+                            href="/categories/<%-item.category %>"><%- item.category %></a> </div>
+                </a>
+                <%}) %>
+                    <%}%>
+                        <a href="/categories" style="border-radius: 10px;overflow:hidden">
+                            <div class="category-image"><img src="/images/viewAll.jpg" alt=""><a href="/categories">View All</a> </div>
+    </div>
+    <div class="latest">
+        <div class="head_line">
+            <h2>Lates Recipies</h2>
+            <a href="">View More</a>
+        </div>
+        <div class="photos">
+            <% if(latest) {%>
+                <% latest.forEach(recipe=>{ %>
+                    <a href="/recipe/<%= recipe._id %>">
+                        <div>
+                            <img src="/uploads/<%- recipe.image %>"
+                                alt="<%- recipe.name %> This images not Available in Your System">
+                            <!-- <a href="" style="color:black;">
+                                <%- recipe.name %>
+                             </a> -->
+                        </div>
+                    </a>
+                    <%})%>
+                        <% } %>
+
+        </div>
+        <div class="head_line">
+            <h2>Thai Recipies</h2>
+            <a href="">View More</a>
+        </div>
+        <div class="photos">
+            <% if(Thai) {%>
+                <% Thai.forEach(recipe=>{ %>
+                    <a href="/recipe/<%= recipe._id %>">
+                        <div>
+                            <img src="/uploads/<%- recipe.image %>"
+                                alt="<%- recipe.name %> This images not Available in Your System">
+                            <!-- <a href="" style="color:black;" class="txt">
+                                <%- recipe.name %>
+                             </a> -->
+                        </div>
+                    </a>
+                    <%})%>
+                        <% } %>
+
+        </div>
+        <div class="head_line">
+            <h2>Chinese Recipies</h2>
+            <a href="">View More</a>
+        </div>
+        <div class="photos">
+            <% if(Chinese) {%>
+                <% Chinese.forEach(recipe=>{ %>
+                    <a href="/recipe/<%= recipe._id %>">
+                        <div>
+                            <img src="/uploads/<%- recipe.image %>"
+                                alt="<%- recipe.name %> This images not Available in Your System">
+                            <!-- <a href="" style="color:black;">
+                                <%- recipe.name %>
+                             </a> -->
+                        </div>
+                    </a>
+                    <%})%>
+                        <% } %>
+
+        </div>
+        <div class="head_line">
+            <h2>Indian Recipies</h2>
+            <a href="">View More</a>
+        </div>
+        <div class="photos">
+            <% if(indian) {%>
+                <% indian.forEach(recipe=>{ %>
+                    <a href="/recipe/<%= recipe._id %>">
+                        <div>
+                            <img src="/uploads/<%- recipe.image %>"
+                                alt="<%- recipe.name %> This images not Available in Your System">
+                            <!-- <a href="" style="color:black;">
+                                <%- recipe.name %>
+                             </a> -->
+                        </div>
+                    </a>
+                    <%})%>
+                        <% } %>
+
+        </div>
+        <div class="head_line">
+            <h2>Arabic Recipies</h2>
+            <a href="">View More</a>
+        </div>
+        <div class="photos">
+            <% if(Arabic) {%>
+                <% Arabic.forEach(recipe=>{ %>
+                    <a href="/recipe/<%= recipe._id %>">
+                        <div>
+                            <img src="/uploads/<%- recipe.image %>"
+                                alt="<%- recipe.name %> This images not Available in Your System">
+                            <!-- <a href="" style="color:black;">
+                                <%- recipe.name %>
+                             </a> -->
+                        </div>
+                    </a>
+                    <%})%>
+                        <% } %>
+
+        </div>
+        <div class="head_line">
+            <h2>American Recipies</h2>
+            <a href="">View More</a>
+        </div>
+        <div class="photos">
+            <% if(American) {%>
+                <% American.forEach(recipe=>{ %>
+                    <a href="/recipe/<%= recipe._id %>">
+                        <div>
+                            <img src="/uploads/<%- recipe.image %>"
+                                alt="<%- recipe.name %> This images not Available in Your System">
+                            <!-- <a href="" style="color:black;">
+                                <%- recipe.name %>
+                             </a> -->
+                        </div>
+                    </a>
+                    <%})%>
+                        <% } %>
+
+        </div>
+
+    </div>
+    <div class="bottom">
+        <div class="b-img">
+            <img src="/images/cook-3-w.webp" alt="">
+            <img src="/images/cook-1-w.webp" alt="">
+            <img src="/images/cook-2-w.webp" alt="">
+        </div>
+        <div class="b-head">
+            <h1>Publish your recipe for FREE today</h1>
+            <p>Pubish your Recipe in front of thousands of people for free</p>
+            <a href="/submit-recipe">Submit Recipe</a>
+        </div>
+    </div>
+    <footer>
+        <h6>Build By aflu</h6>
+    </footer>
+</div>

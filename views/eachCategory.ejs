@@ -1,0 +1,28 @@
+<div class="all-Categories">
+    <div class="category-contents">
+        <% if(eachCate) { %>
+        <h1>Explore <%-CategoryName %></h1>
+        <div class="navs">
+            <a href="/">Home</a><span>/</span>
+            <a href="/categories">Categories</a> <span>/</span>
+            <p> <%-CategoryName %></p>
+        </div>
+    </div>
+    <div class="category-images">
+        
+            <% eachCate.forEach(item=>{ %>
+                <a href=" /recipe/<%= item._id %>" class="lin">
+                    <div class="each-category"><img src="/uploads/<%- item.image %>" alt="<%- item.name %>">
+                        <a href=" /recipe/<%= item._id %>"><%- item.name %></a>
+                    </div>
+                </a>
+           <% }) %>
+      <%  }%>
+  
+
+
+    </div>
+    <footer>
+        <h6>Build By aflu</h6>
+    </footer>
+</div>

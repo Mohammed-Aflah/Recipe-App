@@ -1,0 +1,63 @@
+<div class="home">
+    <div class="container">
+        <h1 class="text-center " style="font-weight: bold;font-size:30px;font-family:monospace;">Submit Your Recipies</h1>
+        <p class="text-center text-secondary" style="font-family:monospace">Share your amazing recipies with thousands of web developers accross <br>
+            the world Fill out
+            form to get started</p>
+            <% if(infoSubmitObj !='')  { %>
+                <div class="alert alert-warning" role="alert">
+                    <%- infoSubmitObj %>
+                  </div>
+           <% } %>
+            <!-- <% if(infoErrorsObj !='')  { %>
+                <div class="alert alert-danger" role="alert">
+                    <%- infoErrorsObj %> Error Occured ., Resubmit Your Form
+                  </div>
+           <% } %> -->
+        <form enctype="multipart/form-data" method="post" action="/submit-recipe"
+            style="width: 60%;margin:auto;background:linear-gradient(to right,rgb(220, 166, 65),pink);padding:25px;border-radius: 5px;">
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="Name" class="form-label">Name</label>
+                <input type="text" class="form-control" required name="name">
+            </div>
+            <div class="mb-3">
+                <label for="Description" class="form-label">Description</label>
+                <!-- <input type="text" class="form-control" name="name"> -->
+                <textarea style="resize: none;" name="Description" id="" cols="30" rows="5"
+                    class="form-control" required></textarea>
+            </div>
+            <div class="inglist" id="ingList">
+                <div class="mb-3" id="ingDiv">
+                    <label for="Ingredients" class="form-label">Ingredients</label>
+                    <div class="ingDiv" id="iD">
+                        <input type="text" class="form-control mt-1" id="inp" name="Ingredients" />
+                    </div>
+                </div>
+            </div>
+            <div class="btns" style="display: flex;justify-content: space-between;">
+                <button class="btn btn-success form-control mb-2" style="width: 150px;" id="add-btn">+Ingredient</button>
+                <button class="btn btn-success form-control mb-2" style="width: 150px;" id="minus-btn">-Ingredient</button>
+            </div>
+            <div class="mb-3">
+                <label for="Name" class="form-label">Select Category</label>
+
+                <select name="category" id="" class="form-control">
+                    <option value="Thai">Thai</option>
+                    <option value="Indian">Indian</option>
+                    <option value="American">American</option>
+                    <option value="Arabic">Arabic</option>
+                    <option value="Chinese">Chinese</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="Image" class="form-label">Product Image</label>
+                <input type="file" class="form-control" name="Image">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Recipies</button>
+        </form>
+    </div>
+</div>
